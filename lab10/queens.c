@@ -14,6 +14,7 @@ int place_queens(int num_rows, int num_cols, int num_queens) {
   return 0;// change 0 to your answer
 }
 
+
 void TestCase() {
   // Test Case : 1
   assert(place_queens(1,1,1) == 1);
@@ -70,6 +71,26 @@ void TestCase() {
   // Test Case : 14
   assert(place_queens(5,10,5) == 3916);
   printf("Passed TestCase14\n");
+  
+    //Test Case : 15 (zero queens)
+    assert(place_queens(5,5,0) == 1);
+    printf("Passed TestCase15\n");
+
+    //Test Case : 16 (narrow board)
+    assert(place_queens(2,3,2) == 2);
+    printf("Passed TestCase16\n");
+
+    //Test Case : 17 (more queens than rows)
+    assert(place_queens(3,3,4) == 0);
+    printf("Passed TestCase17\n");
+
+    //Test Case : 18 (single row)
+    assert(place_queens(1,10,1) == 10);
+    printf("Passed TestCase18\n");
+
+    //Test Case : 19 
+    assert(place_queens(4,6,4) == 46);
+    printf("Passed TestCase19\n");
   
   printf("All tests passed!\n");
 }
